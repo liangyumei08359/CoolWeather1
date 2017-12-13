@@ -1,5 +1,5 @@
 <litepal>
-    <dbname value="coolweather"/>
+    <dbname value="cool_weather1"/>
     <version value="1"/>
     <list>
         <mapping class="com.coolweather1.android.db.Province"/>

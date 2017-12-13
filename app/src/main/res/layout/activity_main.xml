@@ -5,6 +5,7 @@
     android:layout_height="match_parent">
     <fragment
         android:id="@+id/choose_area_fragmnet"
+        android:name="com.coolweather1.android.ChooseAreaFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 </FrameLayout>
