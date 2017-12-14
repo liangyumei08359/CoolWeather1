@@ -18,6 +18,7 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.coolweather1.android.gson.Forecast;
 import com.coolweather1.android.gson.Weather;
+import com.coolweather1.android.service.AutoUpdateService;
 import com.coolweather1.android.util.HttpUtil;
 import com.coolweather1.android.util.Utility;
 
@@ -68,6 +69,8 @@ public class WeatherActivity extends AppCompatActivity {
         SharedPreferences prefs= PreferenceManager.getDefaultSharedPreferences(this);
         String weatherString= prefs.getString("weather",null);
         String bingPic= prefs.getString("bing_pic",null);
+        Intent intent=new Intent(this, AutoUpdateService.class);
+        startService(intent);
         if (bingPic !=null){
             Glide.with(this).load(bingPic).into(bingPicImg);
         } else{
